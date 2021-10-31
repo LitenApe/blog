@@ -1,9 +1,10 @@
+import { Heading } from '@chakra-ui/layout';
 import { Page } from '../../components/layout/Page';
 
 export default function Overview() {
   return (
     <Page title="Latest writings">
-      <h1>Find the latest of my writings here.</h1>
+      <Heading size="4xl">Find the latest of my writings here.</Heading>
     </Page>
   );
 }

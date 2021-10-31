@@ -1,9 +1,31 @@
+import { Heading, Text } from '@chakra-ui/layout';
 import { Page } from '../components/layout/Page';
 
 export default function Home() {
   return (
     <Page title="Home">
-      <h1>Sharing my thoughts on how to build stuff</h1>
+      <Heading size="4xl">Sharing my thoughts on how to build stuff.</Heading>
+      <Text fontSize="2xl" my={8}>
+        The world of software engineering, or simply, the world, is an
+        opinionated place. Everyone has some kind of opinion on how something
+        should be executed. Each and every day, we thrive to improve our crafts,
+        either from reading books or articles on the web.
+      </Text>
+
+      <Text fontSize="2xl" my={8}>
+        You might have found this page out of pure luck, or maybe more
+        accurately, bad luck. But fear not, this is the home of my thoughts and
+        opinions only. Nothing shady will be forced upon you here, only my
+        opinions on how things should be crafted.
+      </Text>
+
+      <Text fontSize="2xl" my={8}>
+        Now that you now where you are, you might wonder, who is this author of
+        the plain looking site? Well, I am a software developer based in Oslo,
+        Norway. My passion lies with frontend application such as website. I
+        might try my hand other disciplines from time to time, so you might find
+        a variety of different topics discussed here.
+      </Text>
     </Page>
   );
 }
