@@ -4,7 +4,9 @@ import { Page } from '../components/layout/Page';
 export default function Home() {
   return (
     <Page title="Home">
-      <Heading size="4xl">Sharing my thoughts on how to build stuff.</Heading>
+      <Heading size="4xl" my={4}>
+        Sharing my thoughts on how to build stuff.
+      </Heading>
       <Text fontSize="2xl" my={8}>
         The world of software engineering, or simply, the world, is an
         opinionated place. Everyone has some kind of opinion on how something
@@ -20,11 +22,12 @@ export default function Home() {
       </Text>
 
       <Text fontSize="2xl" my={8}>
-        Now that you now where you are, you might wonder, who is this author of
+        Now that you know where you are, you might wonder, who is this author of
         the plain looking site? Well, I am a software developer based in Oslo,
-        Norway. My passion lies with frontend application such as websites. I
-        might try my hand other disciplines from time to time, so you might find
-        a variety of different topics discussed here.
+        Norway. My passion lies with frontend development where I create
+        websites in addition to interactive bits and bobs found inside of them.
+        I might try my hand on other disciplines from time to time, so you might
+        find a variety of different topics discussed here.
       </Text>
     </Page>
   );
