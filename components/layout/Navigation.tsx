@@ -4,7 +4,7 @@ import { Routes } from '../../utils/routes';
 
 export function Navigation() {
   return (
-    <Box as="nav" px={4} py={3}>
+    <Box as="nav" mx={4} my={3}>
       <HStack as="ul" style={{ listStyle: 'none' }}>
         <ChakraLink as="li">
           <Link href={Routes.INDEX}>Home</Link>

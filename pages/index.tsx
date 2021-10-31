@@ -22,7 +22,7 @@ export default function Home() {
       <Text fontSize="2xl" my={8}>
         Now that you now where you are, you might wonder, who is this author of
         the plain looking site? Well, I am a software developer based in Oslo,
-        Norway. My passion lies with frontend application such as website. I
+        Norway. My passion lies with frontend application such as websites. I
         might try my hand other disciplines from time to time, so you might find
         a variety of different topics discussed here.
       </Text>
