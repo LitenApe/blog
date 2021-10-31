@@ -17,9 +17,7 @@ export function Page(props: PropsWithChildren<IPage>) {
         <meta name="description" content="Son Thanh Vo's blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation />
       <main>{children}</main>
-      <Footer />
     </>
   );
 }

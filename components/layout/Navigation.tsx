@@ -1,20 +1,21 @@
 import Link from 'next/link';
+import { Box, Link as ChakraLink, HStack } from '@chakra-ui/react';
 import { Routes } from '../../utils/routes';
 
 export function Navigation() {
   return (
-    <nav>
-      <ol>
-        <li>
+    <Box as="nav" px={4} py={3}>
+      <HStack as="ul" style={{ listStyle: 'none' }}>
+        <ChakraLink as="li">
           <Link href={Routes.INDEX}>Home</Link>
-        </li>
-        <li>
+        </ChakraLink>
+        <ChakraLink as="li">
           <Link href={Routes.POSTS}>Posts</Link>
-        </li>
-        <li>
+        </ChakraLink>
+        <ChakraLink as="li">
           <Link href={Routes.DRAFTS}>Drafts</Link>
-        </li>
-      </ol>
-    </nav>
+        </ChakraLink>
+      </HStack>
+    </Box>
   );
 }
