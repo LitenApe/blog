@@ -1,5 +1,5 @@
 import { Text } from '@chakra-ui/layout';
-import { Page } from '../../components/layout/Page';
+import { Page } from '../../components/layout/page';
 
 export default function Overview() {
   return (
@@ -7,7 +7,7 @@ export default function Overview() {
       title="Latest drafts"
       heading="Latest posts that I am currently working on."
     >
-      <Text fontSize="md" my={2}>
+      <Text fontSize="md" my={4}>
         Not sure why you are looking into this space, but I might as well inform
         you of what this page is used for. This page(<Text as="i">drafts</Text>)
         is simply a list of topics, and if you are unlucky, might have some
