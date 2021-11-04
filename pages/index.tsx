@@ -18,7 +18,8 @@ export default function Home() {
         You might have found this page out of pure luck, or maybe more
         accurately, bad luck. But fear not, this is the home of my thoughts and
         opinions only. Nothing shady will be forced upon you here, only my
-        opinions on how things should be crafted.
+        opinions on how things should be crafted. But that in itself might be
+        shady 🤔.
       </Text>
 
       <Text fontSize="2xl" my={8}>

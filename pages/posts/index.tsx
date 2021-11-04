@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/layout';
+import { Heading, Text } from '@chakra-ui/layout';
 import { Page } from '../../components/layout/Page';
 
 export default function Overview() {
@@ -7,6 +7,9 @@ export default function Overview() {
       <Heading size="2xl" my={2}>
         Find the latest of my writings here.
       </Heading>
+      <Text fontSize="md" cy={2}>
+        so much content...
+      </Text>
     </Page>
   );
 }
