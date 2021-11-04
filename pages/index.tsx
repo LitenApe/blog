@@ -1,12 +1,15 @@
-import { Heading, Text } from '@chakra-ui/layout';
+import { Text } from '@chakra-ui/layout';
 import { Page } from '../components/layout/Page';
 
 export default function Home() {
   return (
-    <Page title="Home">
-      <Heading size="4xl" my={4}>
-        Sharing my thoughts on how to build stuff.
-      </Heading>
+    <Page
+      title="Home"
+      heading="Sharing my thoughts on how to build stuff."
+      headingProps={{
+        size: '4xl',
+      }}
+    >
       <Text fontSize="2xl" my={8}>
         The world of software engineering, or simply, the world, is an
         opinionated place. Everyone has some kind of opinion on how something

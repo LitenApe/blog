@@ -1,13 +1,12 @@
-import { Heading, Text } from '@chakra-ui/layout';
+import { Text } from '@chakra-ui/layout';
 import { Page } from '../../components/layout/Page';
 
 export default function Overview() {
   return (
-    <Page title="Latest drafts">
-      <Heading as="h1" size="2xl" my={2}>
-        Latest posts that I am currently working on.
-      </Heading>
-
+    <Page
+      title="Latest drafts"
+      heading="Latest posts that I am currently working on."
+    >
       <Text fontSize="md" my={2}>
         Not sure why you are looking into this space, but I might as well inform
         you of what this page is used for. This page(<Text as="i">drafts</Text>)
