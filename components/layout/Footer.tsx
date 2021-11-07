@@ -6,9 +6,9 @@ export function Footer() {
       <Text fontSize="md" my={4}>
         The site is built using <Link href="https://nextjs.org/">nextjs</Link>{' '}
         and <Link href="https://chakra-ui.com">chakra ui</Link> with no effort
-        whatsoever to the design. I did not want to waste time on choosing
-        colours, fonts and spacing so everything is built with &quot;out of the
-        box&quot; configurations.
+        whatsoever to the design. The entire site can be found on{' '}
+        <Link href="https://github.com/LitenApe/blog">github</Link> if you are
+        curious about how the site was created and configured.
       </Text>
     </Container>
   );
