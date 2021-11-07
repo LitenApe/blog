@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/layout';
 import { Page } from '../components/layout/page';
+import { Quote } from '../components/layout/quote';
 import { getPages } from '../utils/getPages';
 
 export default function Home() {
@@ -12,7 +13,13 @@ export default function Home() {
       headingProps={{
         size: '4xl',
       }}
+      hideHeading={true}
     >
+      <Quote>
+        If you understand it, you can master it. When you master it, you can do
+        anything with it.
+      </Quote>
+
       <Text fontSize="2xl" my={8}>
         The world of software engineering, or simply, the world, is an
         opinionated place. Everyone has some kind of opinion on how something
