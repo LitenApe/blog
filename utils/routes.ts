@@ -1,5 +1,4 @@
 export enum Routes {
   INDEX = '/',
-  POSTS = '/posts',
-  DRAFTS = '/drafts',
+  POSTS = '/thoughts',
 }

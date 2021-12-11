@@ -1,11 +1,8 @@
-import { Text } from '@chakra-ui/layout';
-import { Page } from '../components/layout/page';
+import { Page } from '../components/layout/Page';
 import { Quote } from '../components/layout/quote';
-import { getPages } from '../utils/getPages';
+import { Text } from '@chakra-ui/layout';
 
 export default function Home() {
-  getPages();
-
   return (
     <Page
       title="Home"

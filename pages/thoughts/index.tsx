@@ -1,5 +1,5 @@
+import { Page } from '../../components/layout/Page';
 import { Text } from '@chakra-ui/layout';
-import { Page } from '../../components/layout/page';
 
 export default function Overview() {
   return (

@@ -1,5 +1,6 @@
+import { Link as ChakraLink, Container, HStack } from '@chakra-ui/react';
+
 import Link from 'next/link';
-import { Link as ChakraLink, HStack, Container } from '@chakra-ui/react';
 import { Routes } from '../../utils/routes';
 
 export function Navigation() {
@@ -10,10 +11,7 @@ export function Navigation() {
           <Link href={Routes.INDEX}>Home</Link>
         </ChakraLink>
         <ChakraLink as="li">
-          <Link href={Routes.POSTS}>Posts</Link>
-        </ChakraLink>
-        <ChakraLink as="li">
-          <Link href={Routes.DRAFTS}>Drafts</Link>
+          <Link href={Routes.POSTS}>Thoughts</Link>
         </ChakraLink>
       </HStack>
     </Container>
