@@ -21,7 +21,3 @@ export interface PageContent {
   created_at: number;
   last_modified: number;
 }
-
-export interface ProcessedPageContent extends PageContent {
-  html: string;
-}

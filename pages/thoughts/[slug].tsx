@@ -1,18 +1,19 @@
 import { getAllThoughts, getThought } from '../../utils/getPages';
 
 import { GetStaticPropsContext } from 'next';
-import { HTMLContent } from '../../components/layout/HTMLContent';
 import { Page } from '../../components/layout/Page';
-import { ProcessedPageContent } from '../../types/page';
+import { PageContent } from '../../types/page';
 import { processRawContent } from '../../utils/processRawContent';
 
-export default function Thought(props: ProcessedPageContent) {
+export default function Thought(props: PageContent) {
+  const content = processRawContent(props.raw);
+
   return (
     <Page title={props.frontmatter.title}>
       <p>Author: {props.frontmatter.author}</p>
       <p>Last modified: {props.last_modified}</p>
       <p>Published: {props.created_at}</p>
-      <HTMLContent content={props.html} />
+      {content}
     </Page>
   );
 }
@@ -27,10 +28,7 @@ export async function getStaticProps(
   const post = getThought(ctx.params.slug);
 
   return {
-    props: {
-      ...post,
-      html: await processRawContent(post.raw),
-    },
+    props: post,
   };
 }
 
