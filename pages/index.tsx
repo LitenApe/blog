@@ -1,5 +1,5 @@
 import { Page } from '../components/layout/Page';
-import { Quote } from '../components/layout/quote';
+import { Quote } from '../components/layout/Quote';
 import { Text } from '@chakra-ui/layout';
 
 export default function Home() {

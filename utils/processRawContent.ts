@@ -1,4 +1,5 @@
 import { Paragraph } from '../components/layout/Paragraph';
+import { Quote } from '../components/layout/Quote';
 import { createElement } from 'react';
 import rehype from 'rehype-react';
 import remark_parse from 'remark-parse';
@@ -12,6 +13,7 @@ const processor = unified()
     createElement: createElement,
     components: {
       p: Paragraph,
+      blockquote: Quote,
     },
   });
 
