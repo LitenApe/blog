@@ -7,8 +7,8 @@ export function Quote(props: PropsWithChildren<TextProps>) {
   return (
     <Text
       as="blockquote"
-      fontSize="4xl"
-      my={16}
+      fontSize="xl"
+      my={8}
       paddingLeft={8}
       borderLeft="4px"
       borderLeftRadius={4}

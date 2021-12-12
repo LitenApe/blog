@@ -1,4 +1,5 @@
 import { Page } from '../../components/layout/Page';
+import { Paragraph } from '../../components/layout/Paragraph';
 import { Text } from '@chakra-ui/layout';
 
 export default function Overview() {
@@ -7,9 +8,7 @@ export default function Overview() {
       title="Latest writings"
       heading="Find the latest of my writings here."
     >
-      <Text fontSize="md" cy={4}>
-        so much content...
-      </Text>
+      <Paragraph>so much content...</Paragraph>
     </Page>
   );
 }
