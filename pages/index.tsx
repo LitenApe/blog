@@ -1,7 +1,6 @@
 import { Page } from '../components/layout/Page';
 import { Paragraph } from '../components/layout/Paragraph';
 import { Quote } from '../components/layout/Quote';
-import { Text } from '@chakra-ui/layout';
 
 export default function Home() {
   return (

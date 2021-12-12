@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/layout';
 
 export function Paragraph(props: PropsWithChildren<{}>) {
   const { children } = props;

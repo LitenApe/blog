@@ -3,7 +3,7 @@ import { getAllThoughts, getThought } from '../../utils/getPages';
 import { GetStaticPropsContext } from 'next';
 import { Page } from '../../components/layout/Page';
 import { PageContent } from '../../types/page';
-import { Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/layout';
 import { Timestamp } from '../../components/layout/Timstamp';
 import { When } from '../../components/utility/When';
 import { processRawContent } from '../../utils/processRawContent';

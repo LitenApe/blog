@@ -1,14 +1,38 @@
-import { Page } from '../../components/layout/Page';
+import { Page } from '../../types/page';
+import { Page as PageWrapper } from '../../components/layout/Page';
 import { Paragraph } from '../../components/layout/Paragraph';
-import { Text } from '@chakra-ui/layout';
+import { Post } from '../../components/layout/Post';
+import { getAllThoughts } from '../../utils/getPages';
+import { useRouter } from 'next/dist/client/router';
 
-export default function Overview() {
+interface Props {
+  readonly posts: Array<Page>;
+}
+
+export default function Overview(props: Props): JSX.Element {
+  const router = useRouter();
+
   return (
-    <Page
-      title="Latest writings"
-      heading="Find the latest of my writings here."
-    >
-      <Paragraph>so much content...</Paragraph>
-    </Page>
+    <PageWrapper title="Latest writings" heading="My thoughts on everything">
+      <Paragraph>
+        Below you will find a collection of my thoughts on everything. Use the
+        filters to quickly find content which might interest you 🙂.
+      </Paragraph>
+      {props.posts.map((post) => (
+        <Post
+          key={`thought-${post.created_at}`}
+          slug={post.slug}
+          {...post.frontmatter}
+        />
+      ))}
+    </PageWrapper>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: getAllThoughts(),
+    },
+  };
 }

@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Container, HStack } from '@chakra-ui/react';
+import { Link as ChakraLink, Container, HStack } from '@chakra-ui/layout';
 
 import Link from 'next/link';
 import { Routes } from '../../utils/routes';
