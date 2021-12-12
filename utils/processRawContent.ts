@@ -6,16 +6,19 @@ import {
   UnorderedList,
 } from '@chakra-ui/layout';
 
+import { Image } from '@chakra-ui/image';
 import { Paragraph } from '../components/layout/Paragraph';
 import { Quote } from '../components/layout/Quote';
 import { createElement } from 'react';
 import rehype from 'rehype-react';
 import remark_parse from 'remark-parse';
 import remark_rehype from 'remark-rehype';
+import remark_unwrap_images from 'remark-unwrap-images';
 import { unified } from 'unified';
 
 const processor = unified()
   .use(remark_parse)
+  .use(remark_unwrap_images)
   .use(remark_rehype)
   .use(rehype, {
     createElement: createElement,
@@ -33,6 +36,7 @@ const processor = unified()
       ol: OrderedList,
       li: ListItem,
       blockquote: Quote,
+      img: Image,
     },
   });
 

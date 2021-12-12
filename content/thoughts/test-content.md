@@ -1,7 +1,7 @@
 ---
 title: Markdown Test Content
 author: Son Thanh Vo
-excerpt: this is the excerpt
+excerpt: A variety of content written in markdown, compiled to jsx and rendered as html.
 ---
 
 # Markdown: Syntax
@@ -203,7 +203,7 @@ lazy:
 
 - This is a list item with two paragraphs.
 
-      This is the second paragraph in the list item. You're
+  This is the second paragraph in the list item. You're
 
   only required to indent the first line. Lorem ipsum dolor
   sit amet, consectetuer adipiscing elit.
