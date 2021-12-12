@@ -1,3 +1,4 @@
+import { Box, ListItem, UnorderedList } from '@chakra-ui/layout';
 import { Checkbox, CheckboxGroup } from '@chakra-ui/checkbox';
 import { FormEvent, useEffect, useState } from 'react';
 
@@ -61,13 +62,13 @@ export default function Overview(props: Props): JSX.Element {
           >{`${category} ${instances}`}</Checkbox>
         ))}
       </CheckboxGroup>
-      {filteredPosts.map((post) => (
-        <Post
-          key={`thought-post-${post.created_at}`}
-          slug={post.slug}
-          {...post.frontmatter}
-        />
-      ))}
+      <UnorderedList styleType="none" ml={0}>
+        {filteredPosts.map((post) => (
+          <ListItem key={`thought-post-${post.created_at}`}>
+            <Post {...post} />
+          </ListItem>
+        ))}
+      </UnorderedList>
     </PageWrapper>
   );
 }
