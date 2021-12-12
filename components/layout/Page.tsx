@@ -1,7 +1,8 @@
-import { Container, Heading, HeadingProps } from '@chakra-ui/layout';
-import { VisuallyHidden } from '@chakra-ui/react';
+import { Box, Container, Heading, HeadingProps } from '@chakra-ui/layout';
+
 import Head from 'next/head';
 import { PropsWithChildren } from 'react';
+import { VisuallyHidden } from '@chakra-ui/react';
 
 interface ITitle extends HeadingProps {
   heading: string;
@@ -51,13 +52,15 @@ export function Page(props: PropsWithChildren<IPage>) {
         <meta name="description" content="Son Thanh Vo's blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container as="main">
-        <Title
-          heading={heading || title}
-          hidden={hideHeading}
-          {...headingProps}
-        />
-        {children}
+      <Container maxW="container.lg">
+        <Box as="main" mx={4} maxW="container.sm">
+          <Title
+            heading={heading || title}
+            hidden={hideHeading}
+            {...headingProps}
+          />
+          {children}
+        </Box>
       </Container>
     </>
   );
