@@ -2,8 +2,8 @@ export interface Frontmatter {
   [key: string]: any;
   author: string;
   title: string;
-  tags: string;
-  categories: string;
+  tags: Array<string>;
+  categories: Array<string>;
   excerpt?: string;
 }
 
