@@ -6,7 +6,7 @@ interface Props {
 
 export function When(props: PropsWithChildren<Props>): JSX.Element | null {
   if (props.condition) {
-    return <>props.children</>;
+    return <>{props.children}</>;
   }
 
   return null;

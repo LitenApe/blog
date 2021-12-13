@@ -19,6 +19,8 @@ export function Post(props: Page) {
       borderWidth="thin"
       borderRadius="sm"
       boxShadow="xl"
+      borderColor="gray.300"
+      cursor="pointer"
       onClick={() => router.push(`${Routes.POSTS}/${slug}`)}
     >
       <header>

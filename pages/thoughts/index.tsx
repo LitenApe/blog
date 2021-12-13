@@ -6,6 +6,7 @@ import { Page } from '../../types/page';
 import { Page as PageWrapper } from '../../components/layout/Page';
 import { Paragraph } from '../../components/layout/Paragraph';
 import { Post } from '../../components/layout/Post';
+import { Quote } from '../../components/layout/Quote';
 import { getAllThoughts } from '../../utils/getPages';
 
 interface Props {
@@ -48,10 +49,30 @@ export default function Overview(props: Props): JSX.Element {
 
   return (
     <PageWrapper title="Latest writings" heading="My thoughts on everything">
+      <Quote author="Mary Jean LeTendre">
+        Let us never confuse stability with stagnation
+      </Quote>
       <Paragraph>
-        Below you will find a collection of my thoughts on everything. Use the
-        filters to quickly find content which might interest you 🙂.
+        As a developer, as a person in a quickly moving field, such as
+        technology, my biggest fear is stagnation. There is nothing more
+        terrifying to me then the thought that I can't improve, that I have
+        peaked. That thought og never being able to accomplish anything more
+        then what I have now, is scary.
       </Paragraph>
+
+      <Paragraph>
+        This site was created as a way to combat those thoughts, a place for
+        reflections. A simple collection of my thoughts throughout time to
+        improve the visibility of my everchanging mind. A place to prove to
+        myself that I am still improving.
+      </Paragraph>
+
+      <Paragraph>
+        The most correct definition for this site would probably we a diary.
+        However, this will be a collection of those diary entries which I think
+        has some value, which might do some good outside of my head.
+      </Paragraph>
+
       <CheckboxGroup>
         {Object.entries(categories).map(([category, instances]) => (
           <Checkbox
@@ -64,7 +85,7 @@ export default function Overview(props: Props): JSX.Element {
       </CheckboxGroup>
       <UnorderedList styleType="none" ml={0}>
         {filteredPosts.map((post) => (
-          <ListItem key={`thought-post-${post.created_at}`}>
+          <ListItem key={`thought-post-${post.created_at}`} mt={4}>
             <Post {...post} />
           </ListItem>
         ))}
