@@ -53,24 +53,17 @@ export default function Overview(props: Props): JSX.Element {
         Let us never confuse stability with stagnation
       </Quote>
       <Paragraph>
-        As a developer, as a person in a quickly moving field, such as
-        technology, my biggest fear is stagnation. There is nothing more
-        terrifying to me then the thought that I can't improve, that I have
-        peaked. That thought og never being able to accomplish anything more
-        then what I have now, is scary.
+        As a developer, as a person in a quickly moving field, my biggest fear
+        is stagnation. There is nothing more terrifying to me then the thought
+        that I can't improve, that I have peaked. That thought of never being
+        able to accomplish anything more then what I have now, is scary.
       </Paragraph>
 
       <Paragraph>
         This site was created as a way to combat those thoughts, a place for
         reflections. A simple collection of my thoughts throughout time to
-        improve the visibility of my everchanging mind. A place to prove to
-        myself that I am still improving.
-      </Paragraph>
-
-      <Paragraph>
-        The most correct definition for this site would probably we a diary.
-        However, this will be a collection of those diary entries which I think
-        has some value, which might do some good outside of my head.
+        improve the visibility of how I've evolved over time. A place to prove
+        to myself that I am still learning and improving.
       </Paragraph>
 
       <CheckboxGroup>
