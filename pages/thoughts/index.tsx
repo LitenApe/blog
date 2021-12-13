@@ -20,7 +20,7 @@ export default function Overview(props: Props): JSX.Element {
 
   useEffect(() => {
     posts.map(({ frontmatter }) => {
-      frontmatter.categories?.map((category) => {
+      frontmatter.categories.map((category) => {
         const exist = categories.hasOwnProperty(category);
         setCategories((prev) => ({
           ...prev,
@@ -43,7 +43,7 @@ export default function Overview(props: Props): JSX.Element {
 
   if (filter !== null) {
     filteredPosts = posts.filter(
-      (post) => post.frontmatter.categories?.indexOf(filter) !== -1
+      (post) => post.frontmatter.categories.indexOf(filter) !== -1
     );
   }
 
@@ -53,16 +53,16 @@ export default function Overview(props: Props): JSX.Element {
         Let us never confuse stability with stagnation
       </Quote>
       <Paragraph>
-        As a developer, as a person in a quickly moving field, my biggest fear
-        is stagnation. There is nothing more terrifying to me then the thought
-        that I can't improve, that I have peaked. That thought of never being
-        able to accomplish anything more then what I have now, is scary.
+        As a developer and as a person in a quickly moving field, my biggest
+        fear is stagnation. There is nothing more terrifying to me then the
+        thought that I can`t improve, that I have peaked. That thought of never
+        being able to accomplish anything more then what I have now, is scary.
       </Paragraph>
 
       <Paragraph>
         This site was created as a way to combat those thoughts, a place for
         reflections. A simple collection of my thoughts throughout time to
-        improve the visibility of how I've evolved over time. A place to prove
+        improve the visibility of how I`ve evolved over time. A place to prove
         to myself that I am still learning and improving.
       </Paragraph>
 

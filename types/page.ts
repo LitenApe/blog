@@ -4,25 +4,25 @@ export interface Frontmatter {
   date: string;
   tags?: Array<string>;
   categories?: Array<string>;
-  excerpt?: string;
+  excerpt?: string | undefined;
 }
 
 export interface Page {
   raw: string;
-  frontmatter: Frontmatter;
+  frontmatter: Required<Frontmatter>;
   slug: string;
   created_at: number;
 }
 
 export interface PageContent {
   raw: string;
-  frontmatter: Frontmatter;
+  frontmatter: Required<Frontmatter>;
   created_at: number;
 }
 
 export interface File {
   raw: string;
-  frontmatter: Frontmatter;
+  frontmatter: Required<Frontmatter>;
   content: string;
   created_at: number;
 }

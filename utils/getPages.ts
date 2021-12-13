@@ -37,7 +37,7 @@ function getFile(file_path: string): File {
       date: `${data.date.getFullYear()}-${data.date.getMonth()}-${data.date.getUTCDate()}`,
       tags,
       categories,
-    } as Frontmatter,
+    } as Required<Frontmatter>,
     content,
     created_at: data.date.getTime(),
   };
