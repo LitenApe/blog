@@ -1,14 +1,12 @@
-import { Box, Link } from '@chakra-ui/layout';
-import { Frontmatter, Page } from '../../types/page';
+import { Box, Link, Text } from '@chakra-ui/layout';
 
+import { Page } from '../../types/page';
 import { Paragraph } from '../layout/Paragraph';
 import { Routes } from '../../utils/routes';
-import { Timestamp } from './Timstamp';
-import { When } from '../utility/When';
 import { useRouter } from 'next/dist/client/router';
 
 export function Post(props: Page) {
-  const { slug, frontmatter, created_at, last_modified } = props;
+  const { slug, frontmatter, created_at } = props;
   const router = useRouter();
 
   return (
@@ -28,7 +26,7 @@ export function Post(props: Page) {
           {frontmatter.title}
         </Link>
       </header>
-      <Timestamp leadingText="Published" time={created_at} />
+      <Text>Published: {frontmatter.date}</Text>
       <Paragraph mb={0} mt={2}>
         {frontmatter.excerpt}
       </Paragraph>

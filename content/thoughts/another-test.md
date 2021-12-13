@@ -1,6 +1,7 @@
 ---
 title: Another test
 author: Son Thanh Vo
+date: 2021-12-12
 tags: frontend, javascript, framework
 categories: mindset
 excerpt: this is the excerpt

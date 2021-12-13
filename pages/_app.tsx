@@ -10,9 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Navigation />
-      <Divider />
+      <Divider mb={8} />
       <Component {...pageProps} />
-      <Divider />
+      <Divider mt={8} />
       <Footer />
     </ChakraProvider>
   );

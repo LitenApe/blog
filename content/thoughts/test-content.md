@@ -1,6 +1,7 @@
 ---
 title: Markdown Test Content
 author: Son Thanh Vo
+date: 2021-12-10
 excerpt: A variety of content written in markdown, compiled to jsx and rendered as html.
 ---
 

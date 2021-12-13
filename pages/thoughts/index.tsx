@@ -1,6 +1,6 @@
-import { Box, ListItem, UnorderedList } from '@chakra-ui/layout';
 import { Checkbox, CheckboxGroup } from '@chakra-ui/checkbox';
 import { FormEvent, useEffect, useState } from 'react';
+import { ListItem, UnorderedList } from '@chakra-ui/layout';
 
 import { Page } from '../../types/page';
 import { Page as PageWrapper } from '../../components/layout/Page';
@@ -20,7 +20,7 @@ export default function Overview(props: Props): JSX.Element {
 
   useEffect(() => {
     posts.map(({ frontmatter }) => {
-      frontmatter.categories.map((category) => {
+      frontmatter.categories?.map((category) => {
         const exist = categories.hasOwnProperty(category);
         setCategories((prev) => ({
           ...prev,
@@ -43,7 +43,7 @@ export default function Overview(props: Props): JSX.Element {
 
   if (filter !== null) {
     filteredPosts = posts.filter(
-      (post) => post.frontmatter.categories.indexOf(filter) !== -1
+      (post) => post.frontmatter.categories?.indexOf(filter) !== -1
     );
   }
 
