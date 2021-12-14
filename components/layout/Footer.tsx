@@ -2,7 +2,7 @@ import { Box, Container, Link, Text } from '@chakra-ui/layout';
 
 export function Footer() {
   return (
-    <Container maxW="container.lg">
+    <Container maxW="container.lg" mt={16}>
       <Box as="footer" my={8} mx={4} maxW="container.sm">
         <Text fontSize="md" my={4}>
           The site is built using <Link href="https://nextjs.org/">nextjs</Link>{' '}

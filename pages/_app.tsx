@@ -1,4 +1,5 @@
-import '../styles/globals.css';
+import '../styles/index.scss';
+import 'normalize.css';
 
 import { ChakraProvider, Divider } from '@chakra-ui/react';
 
@@ -10,9 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Navigation />
-      <Divider mb={8} />
       <Component {...pageProps} />
-      <Divider mt={8} />
       <Footer />
     </ChakraProvider>
   );
