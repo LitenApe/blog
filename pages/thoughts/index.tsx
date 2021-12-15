@@ -15,37 +15,6 @@ interface Props {
 
 export default function Overview(props: Props): JSX.Element {
   const { posts } = props;
-  const [categories, setCategories] = useState<Record<string, number>>({});
-  const [filter, setFilter] = useState<string | null>(null);
-
-  useEffect(() => {
-    posts.map(({ frontmatter }) => {
-      frontmatter.categories.map((category) => {
-        const exist = categories.hasOwnProperty(category);
-        setCategories((prev) => ({
-          ...prev,
-          [category]: exist ? prev[category] + 1 : 1,
-        }));
-      });
-    });
-  }, []);
-
-  function toggleFilter(event: FormEvent<HTMLInputElement>) {
-    const { checked, value } = event.currentTarget;
-    if (checked) {
-      setFilter(() => value);
-    } else {
-      setFilter(() => null);
-    }
-  }
-
-  let filteredPosts = posts;
-
-  if (filter !== null) {
-    filteredPosts = posts.filter(
-      (post) => post.frontmatter.categories.indexOf(filter) !== -1
-    );
-  }
 
   return (
     <PageWrapper title="Latest writings" heading="My thoughts on everything">
@@ -66,18 +35,8 @@ export default function Overview(props: Props): JSX.Element {
         to myself that I am still learning and improving.
       </Paragraph>
 
-      <CheckboxGroup>
-        {Object.entries(categories).map(([category, instances]) => (
-          <Checkbox
-            key={`thought-category-${category}`}
-            value={category}
-            isChecked={filter === category}
-            onChange={toggleFilter}
-          >{`${category} ${instances}`}</Checkbox>
-        ))}
-      </CheckboxGroup>
       <UnorderedList styleType="none" ml={0}>
-        {filteredPosts.map((post) => (
+        {posts.map((post) => (
           <ListItem key={`thought-post-${post.created_at}`} mt={4}>
             <Post {...post} />
           </ListItem>
