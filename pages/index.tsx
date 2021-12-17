@@ -1,4 +1,4 @@
-import { Page } from '../components/layout/Page';
+import { Page } from '../components/Page';
 import { Paragraph } from '../components/layout/Paragraph';
 import { Quote } from '../components/layout/Quote';
 

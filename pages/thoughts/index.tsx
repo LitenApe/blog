@@ -3,9 +3,9 @@ import { FormEvent, useEffect, useState } from 'react';
 import { ListItem, UnorderedList } from '@chakra-ui/layout';
 
 import { Page } from '../../types/page';
-import { Page as PageWrapper } from '../../components/layout/Page';
+import { Page as PageWrapper } from '../../components/Page';
 import { Paragraph } from '../../components/layout/Paragraph';
-import { Post } from '../../components/layout/Post';
+import { Post } from '../../components/Post';
 import { Quote } from '../../components/layout/Quote';
 import { getAllThoughts } from '../../utils/getPages';
 

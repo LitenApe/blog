@@ -1,8 +1,8 @@
 import { Box, Link, Text } from '@chakra-ui/layout';
 
-import { Page } from '../../types/page';
-import { Paragraph } from '../layout/Paragraph';
-import { Routes } from '../../utils/routes';
+import { Page } from '../types/page';
+import { Paragraph } from './layout/Paragraph';
+import { Routes } from '../utils/routes';
 import { useRouter } from 'next/dist/client/router';
 
 export function Post(props: Page) {

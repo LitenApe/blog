@@ -1,7 +1,7 @@
 import { Text, TextProps } from '@chakra-ui/layout';
 
 import { PropsWithChildren } from 'react';
-import { When } from './When';
+import { When } from '../When';
 
 interface Props extends TextProps {
   readonly author?: string;

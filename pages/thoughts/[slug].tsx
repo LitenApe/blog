@@ -1,7 +1,7 @@
 import { getAllThoughts, getThought } from '../../utils/getPages';
 
 import { GetStaticPropsContext } from 'next';
-import { Page } from '../../components/layout/Page';
+import { Page } from '../../components/Page';
 import { PageContent } from '../../types/page';
 import { Text } from '@chakra-ui/layout';
 import { processRawContent } from '../../utils/processRawContent';
