@@ -1,8 +1,11 @@
+import 'highlight.js/styles/github.css';
+
 import { Box, Container, Heading, HeadingProps } from '@chakra-ui/layout';
+import { PropsWithChildren, useEffect } from 'react';
 
 import Head from 'next/head';
-import { PropsWithChildren } from 'react';
 import { VisuallyHidden } from '@chakra-ui/react';
+import highlightjs from 'highlight.js/lib/common';
 
 interface ITitle extends HeadingProps {
   heading: string;
@@ -18,6 +21,10 @@ interface IPage {
 
 function Title(props: ITitle) {
   const { heading, hidden, ...rest } = props;
+
+  useEffect(() => {
+    highlightjs.highlightAll();
+  });
 
   if (hidden) {
     return (
