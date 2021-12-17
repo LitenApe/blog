@@ -5,14 +5,18 @@ import { Routes } from '../../utils/routes';
 
 export function Navigation() {
   return (
-    <Container as="nav" maxW="container.lg">
+    <Container id="main-nav" as="nav" maxW="container.lg" mt={4} mb={8}>
       <HStack as="ul" my={3} mx={4} style={{ listStyle: 'none' }}>
-        <ChakraLink as="li">
-          <Link href={Routes.INDEX}>Home</Link>
-        </ChakraLink>
-        <ChakraLink as="li">
-          <Link href={Routes.POSTS}>Thoughts</Link>
-        </ChakraLink>
+        <li>
+          <ChakraLink as={Link} href={Routes.INDEX}>
+            Home
+          </ChakraLink>
+        </li>
+        <li>
+          <ChakraLink as={Link} href={Routes.POSTS}>
+            Thoughts
+          </ChakraLink>
+        </li>
       </HStack>
     </Container>
   );
