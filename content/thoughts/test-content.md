@@ -240,6 +240,24 @@ This is a normal paragraph:
 
     This is a code block.
 
+    interface Context {
+      readonly id: string;
+      readonly open: boolean;
+      readonly onClick: (event: MouseEvent) => void;
+    }
+
+    export AccordionContext = createContext(Context | null)(null);
+
+    export function useAccordion(): Context {
+      const context = useContext(AccordionContext);
+
+      if (context === null) {
+        throw new Error ('Component must be wrapped by an Accordion Provider');
+      }
+
+      return context;
+    }
+
 Here is an example of AppleScript:
 
     tell application "Foo"
@@ -308,3 +326,5 @@ Unlike a pre-formatted code block, a code span indicates code within a
 normal paragraph. For example:
 
 Use the `printf()` function.
+
+![Test written on a keyboard key](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F3016%2F1*srSO6S7Q0N-Y9iOwdVah0A.jpeg&f=1&nofb=1)

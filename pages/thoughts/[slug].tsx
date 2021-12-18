@@ -7,12 +7,18 @@ import { Text } from '@chakra-ui/layout';
 import { processRawContent } from '../../utils/processRawContent';
 
 export default function Thought(props: PageContent) {
-  const content = processRawContent(props.raw);
+  const { frontmatter, created_at, raw } = props;
+  const content = processRawContent(raw);
 
   return (
-    <Page title={props.frontmatter.title}>
-      <Text>Author: {props.frontmatter.author}</Text>
-      <Text>Published: {props.frontmatter.date}</Text>
+    <Page title={frontmatter.title}>
+      <Text>Author: {frontmatter.author}</Text>
+      <Text>
+        Published:{' '}
+        <Text as="time" dateTime={new Date(created_at).toISOString()}>
+          {frontmatter.date}
+        </Text>
+      </Text>
       {content}
     </Page>
   );

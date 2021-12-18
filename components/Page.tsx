@@ -22,10 +22,6 @@ interface IPage {
 function Title(props: ITitle) {
   const { heading, hidden, ...rest } = props;
 
-  useEffect(() => {
-    highlightjs.highlightAll();
-  });
-
   if (hidden) {
     return (
       <VisuallyHidden>
@@ -51,6 +47,10 @@ export function Page(props: PropsWithChildren<IPage>) {
     headingProps = {},
     hideHeading = false,
   } = props;
+
+  useEffect(() => {
+    highlightjs.highlightAll();
+  }, []);
 
   return (
     <>
