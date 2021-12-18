@@ -34,7 +34,9 @@ function getFile(file_path: string): File {
     raw: file_content,
     frontmatter: {
       ...data,
-      date: `${data.date.getFullYear()}-${data.date.getMonth()}-${data.date.getUTCDate()}`,
+      date: `${data.date.getUTCFullYear()}-${
+        data.date.getUTCMonth() + 1
+      }-${data.date.getUTCDate()}`,
       tags,
       categories,
     } as Required<Frontmatter>,

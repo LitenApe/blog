@@ -19,6 +19,9 @@ export function Post(props: Page) {
       boxShadow="xl"
       borderColor="gray.300"
       cursor="pointer"
+      _hover={{
+        textDecoration: 'underline',
+      }}
       onClick={() => router.push(`${Routes.POSTS}/${slug}`)}
     >
       <header>
