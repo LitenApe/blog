@@ -57,7 +57,6 @@ export function Page(props: PropsWithChildren<IPage>) {
       <Head>
         <title>{title} | LitenApe</title>
         <meta name="description" content="Son Thanh Vo's blog" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container maxW="container.lg">
         <Box as="main" mx={4} maxW="container.sm">

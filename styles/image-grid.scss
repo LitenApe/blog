@@ -1,0 +1,21 @@
+#image-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 50%;
+    max-width: 50%;
+
+    & > * {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    & > * {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+}
