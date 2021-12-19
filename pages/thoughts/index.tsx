@@ -1,5 +1,3 @@
-import { Checkbox, CheckboxGroup } from '@chakra-ui/checkbox';
-import { FormEvent, useEffect, useState } from 'react';
 import { ListItem, UnorderedList } from '@chakra-ui/layout';
 
 import { Page } from '../../types/page';
