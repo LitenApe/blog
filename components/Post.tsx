@@ -13,6 +13,7 @@ export function Post(props: Page) {
     <Box
       as="article"
       p={4}
+      px={8}
       border="solid"
       borderWidth="thin"
       borderRadius="sm"
@@ -29,7 +30,7 @@ export function Post(props: Page) {
           {frontmatter.title}
         </Link>
       </header>
-      <Paragraph mb={0} mt={2}>
+      <Paragraph mb={0} mt={2} style={{}}>
         {frontmatter.excerpt}
       </Paragraph>
       <Text
