@@ -2,6 +2,7 @@
 title: Markdown Test Content
 author: Son Thanh Vo
 date: 2021-12-10
+draft: true
 excerpt: A variety of content written in markdown, compiled to jsx and rendered as html. The purpose of the test file is to verify the correctness of content styling applied to processed markdown.
 ---
 

@@ -5,6 +5,7 @@ export interface Frontmatter {
   tags?: Array<string>;
   categories?: Array<string>;
   excerpt?: string | undefined;
+  draft?: boolean;
 }
 
 export interface Page {

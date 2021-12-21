@@ -39,6 +39,7 @@ function getFile(file_path: string): File {
       }-${data.date.getUTCDate()}`,
       tags,
       categories,
+      draft: typeof data.draft !== 'undefined' ? data.draft : false,
     } as Required<Frontmatter>,
     content,
     created_at: data.date.getTime(),
@@ -63,6 +64,9 @@ export function getAllThoughts(): Array<Page> {
         slug: file.replace(/\.md/, ''),
       };
     })
+    .filter(({ frontmatter }) =>
+      process.env.NODE_ENV === 'development' ? true : !frontmatter.draft
+    )
     .sort((a, b) => b.created_at - a.created_at);
 }
 
