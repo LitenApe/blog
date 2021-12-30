@@ -2,7 +2,6 @@
   a {
     position: relative;
     padding: 2px 0;
-    text-shadow: 1px 4px 8px white;
 
     &:before {
       content: '';
@@ -27,4 +26,8 @@
       }
     }
   }
+}
+
+body.chakra-ui-dark #main-nav a:before {
+  background-color: white;
 }
