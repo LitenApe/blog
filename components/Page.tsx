@@ -1,5 +1,3 @@
-import 'highlight.js/styles/github.css';
-
 import { Box, Container, Heading, HeadingProps } from '@chakra-ui/layout';
 import { PropsWithChildren, useEffect } from 'react';
 
@@ -39,6 +37,22 @@ function Title(props: ITitle) {
   );
 }
 
+function load() {
+  const observer = new MutationObserver(async () => {
+    const isDarkMode = document.body.className.includes('chakra-ui-dark');
+
+    if (isDarkMode) {
+      // @ts-ignore
+      await import('../node_modules/highlight.js/styles/github-dark.css');
+    } else {
+      // @ts-ignore
+      await import('../node_modules/highlight.js/styles/github.css');
+    }
+  });
+
+  observer.observe(document.body, { attributes: true });
+}
+
 export function Page(props: PropsWithChildren<IPage>) {
   const {
     children,
@@ -49,6 +63,7 @@ export function Page(props: PropsWithChildren<IPage>) {
   } = props;
 
   useEffect(() => {
+    load();
     highlightjs.highlightAll();
   }, []);
 
